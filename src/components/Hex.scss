@@ -1,0 +1,88 @@
+$xsWidth: 45px;
+$xsHeight: $xsWidth/1.73;
+
+$smWidth: 100px;
+$smHeight: $smWidth/1.73;
+
+$mdWidth: 140px;
+$mdHeight: $mdWidth/1.73;
+
+$lgWidth: 175px;
+$lgHeight: $lgWidth/1.73;
+
+$xlWidth: 260px;
+$xlHeight: $xlWidth/1.73;
+
+@mixin hex($width, $height) {
+  transition: width 1000ms, height 1000ms, margin 1000ms;
+  position: relative;
+  width: $width;
+  height: $height;
+  background: #CD5C5C;
+  margin: $height/2 auto;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+  }
+
+  &::before {
+    bottom: 100%;
+    border-bottom: $height/2 solid #CD5C5C;
+    transition: bottom 1000ms, border 1000ms;
+  }
+
+  &::after {
+    top: 100%;
+    border-top: $height/2 solid #CD5C5C;
+    transition: top 1000ms, border 1000ms;
+  }
+}
+
+.hex-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .hex-row {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+
+    :first-child {
+      margin-right: 10px;
+    }
+
+    &:first-child {
+      align-items: flex-end;
+    }
+
+    &:last-child {
+      align-items: flex-start;
+    }
+  }
+
+}
+
+.hex-xs {
+  @include hex($xsWidth, $xsHeight)
+}
+
+.hex-sm {
+  @include hex($smWidth, $smHeight)
+}
+
+.hex-md {
+  @include hex($mdWidth, $mdHeight)
+}
+
+.hex-lg {
+  @include hex($lgWidth, $lgHeight)
+}
+
+.hex-xl {
+  @include hex($xlWidth, $xlHeight)
+}
