@@ -1,19 +1,11 @@
 $xsWidth: 45px;
-$xsHeight: $xsWidth/1.73;
-
 $smWidth: 100px;
-$smHeight: $smWidth/1.73;
-
 $mdWidth: 140px;
-$mdHeight: $mdWidth/1.73;
-
 $lgWidth: 175px;
-$lgHeight: $lgWidth/1.73;
-
 $xlWidth: 260px;
-$xlHeight: $xlWidth/1.73;
 
-@mixin hex($width, $height) {
+@mixin hex($width) {
+  $height: $width/1.73;
   transition: width 1000ms, height 1000ms, margin 1000ms;
   position: relative;
   width: $width;
@@ -68,21 +60,21 @@ $xlHeight: $xlWidth/1.73;
 }
 
 .hex-xs {
-  @include hex($xsWidth, $xsHeight)
+  @include hex($xsWidth)
 }
 
 .hex-sm {
-  @include hex($smWidth, $smHeight)
+  @include hex($smWidth)
 }
 
 .hex-md {
-  @include hex($mdWidth, $mdHeight)
+  @include hex($mdWidth)
 }
 
 .hex-lg {
-  @include hex($lgWidth, $lgHeight)
+  @include hex($lgWidth)
 }
 
 .hex-xl {
-  @include hex($xlWidth, $xlHeight)
+  @include hex($xlWidth)
 }
