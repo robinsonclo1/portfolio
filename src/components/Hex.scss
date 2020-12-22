@@ -4,13 +4,13 @@ $mdWidth: 140px;
 $lgWidth: 175px;
 $xlWidth: 260px;
 
-@mixin hex($width) {
+@mixin hex($width, $color: #CD5C5C) {
   $height: $width/1.73;
-  transition: width 1000ms, height 1000ms, margin 1000ms;
+  transition: width 1000ms, height 1000ms, margin 1000ms, background-color 1000ms;
   position: relative;
   width: $width;
   height: $height;
-  background: #CD5C5C;
+  background: $color;
   margin: $height/2 auto;
 
   &::before,
@@ -23,13 +23,13 @@ $xlWidth: 260px;
 
   &::before {
     bottom: 100%;
-    border-bottom: $height/2 solid #CD5C5C;
+    border-bottom: $height/2 solid $color;
     transition: bottom 1000ms, border 1000ms;
   }
 
   &::after {
     top: 100%;
-    border-top: $height/2 solid #CD5C5C;
+    border-top: $height/2 solid $color;
     transition: top 1000ms, border 1000ms;
   }
 }
@@ -60,21 +60,21 @@ $xlWidth: 260px;
 }
 
 .hex-xs {
-  @include hex($xsWidth)
+  @include hex($xsWidth, #731ACC)
 }
 
 .hex-sm {
-  @include hex($smWidth)
+  @include hex($smWidth, #6E4299)
 }
 
 .hex-md {
-  @include hex($mdWidth)
+  @include hex($mdWidth, #0711FF)
 }
 
 .hex-lg {
-  @include hex($lgWidth)
+  @include hex($lgWidth, #FFBC1D)
 }
 
 .hex-xl {
-  @include hex($xlWidth)
+  @include hex($xlWidth, #CC851A)
 }
