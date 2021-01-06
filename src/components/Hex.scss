@@ -1,5 +1,6 @@
 $xsWidth: 45px;
 $smWidth: 100px;
+$smHeight: $smWidth/1.73;
 $mdWidth: 140px;
 $lgWidth: 175px;
 $xlWidth: 260px;
@@ -11,7 +12,7 @@ $xlWidth: 260px;
   width: $width;
   height: $height;
   background: $color;
-  margin: $height/2 auto;
+  margin: $height/3 auto $height/3 0;
 
   &::before,
   &::after {
@@ -49,11 +50,23 @@ $xlWidth: 260px;
     }
 
     &:first-child {
-      align-items: flex-end;
+      align-items: baseline;
+      margin-top: 10px;
+    }
+
+    &:first-child,
+    &:last-child {
+      &:not(.row-lg) {
+        margin-left: 33px;
+      }
     }
 
     &:last-child {
       align-items: flex-start;
+
+      .hex-sm {
+        margin: $smHeight/2 auto $smHeight/2 0;
+      }
     }
   }
 

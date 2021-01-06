@@ -5,16 +5,25 @@ import HexRow from './components/HexRow'
 class App extends React.Component {
   constructor() {
     super()
+    this.setActiveHex = this.setActiveHex.bind(this)
     this.state = {
-      inverted: false
+      inverted: false,
+      activeHex: ''
+    }
+  }
+  
+  setActiveHex(size) {
+    console.log(size)
+    this.setState({ activeHex: size });
+    if (size === "hex-sm") {
+      console.log('here')
+      this.toggleInversion();
     }
   }
   
   toggleInversion = () => {
-    this.setState(previousState => {
-      return {
-        inverted: !this.state.inverted
-      }
+    this.setState({
+      inverted: !this.state.inverted
     })
   }
   
@@ -23,11 +32,10 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <h1>Robin Clower</h1>
-          <button onClick={this.toggleInversion}>{this.state.inverted ? "ON" : "OFF"}</button>
           <div className="hex-wrapper">
-            <HexRow inverted={!this.state.inverted}/>
-            <HexRow inverted={this.state.inverted}/>
-            <HexRow inverted={!this.state.inverted}/>
+            <HexRow inverted={this.state.inverted} class={"top"} setActiveHex={this.setActiveHex}/>
+            <HexRow inverted={!this.state.inverted} class={"middle"} setActiveHex={this.setActiveHex}/>
+            <HexRow inverted={this.state.inverted} class={"bottom"} setActiveHex={this.setActiveHex}/>
           </div>
         </header>
       </div>

@@ -11,14 +11,14 @@ class HexRow extends React.Component {
       <div className="hex-row">
         {this.props.inverted &&
           <>
-            <Hex size={'hex-sm'}/>
-            <Hex size={'hex-md'}/>
+            <Hex size={'hex-sm'} setActiveHex={this.props.setActiveHex}/>
+            <Hex size={'hex-md'} setActiveHex={this.props.setActiveHex}/>
           </>
         }
         {!this.props.inverted &&
           <>
-            <Hex size={'hex-md'}/>
-            <Hex size={'hex-sm'}/>
+            <Hex size={'hex-md'} setActiveHex={this.props.setActiveHex}/>
+            <Hex size={'hex-sm'} setActiveHex={this.props.setActiveHex}/>
           </>
         }
       </div>
@@ -27,16 +27,3 @@ class HexRow extends React.Component {
 }
 
 export default HexRow
-
-/*
-start size layout:
- [0,0] large - [0, 1] small     | small large | small med | med small ? isLargeRow is
- [1,0] small - [1, 1] med
- [2, 0] med  - [2, 1] small
- 
-on hover(x,y)
- x-1,y -> small, x-1, y+-1 med
- x,y -> large  , [x,y+-1] small
- x+1,y -> small, x+1, y+-1 med
- 
- */
