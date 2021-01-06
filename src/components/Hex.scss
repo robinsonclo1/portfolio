@@ -54,10 +54,20 @@ $xlWidth: 260px;
       margin-top: 10px;
     }
 
-    &:first-child,
-    &:last-child {
-      &:not(.row-lg) {
-        margin-left: 33px;
+    &:not(.inverted) {
+      &:first-child,
+      &:last-child {
+        .hex-md {
+          margin-left: 33px;
+        }
+      }
+    }
+
+    &:not(.inverted) {
+      &:nth-child(2) {
+        .hex-md {
+          margin-left: 33px;
+        }
       }
     }
 
@@ -65,7 +75,7 @@ $xlWidth: 260px;
       align-items: flex-start;
 
       .hex-sm {
-        margin: $smHeight/2 auto $smHeight/2 0;
+        margin: $smHeight/2.2 10px $smHeight/3 0;
       }
     }
   }

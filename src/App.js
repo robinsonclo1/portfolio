@@ -13,10 +13,8 @@ class App extends React.Component {
   }
   
   setActiveHex(size) {
-    console.log(size)
     this.setState({ activeHex: size });
     if (size === "hex-sm") {
-      console.log('here')
       this.toggleInversion();
     }
   }

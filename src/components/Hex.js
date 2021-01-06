@@ -13,7 +13,6 @@ class Hex extends React.Component {
   
 
   handleChange() {
-    console.log(this.props.size)
     this.props.setActiveHex(this.props.size);
     this.setState({
       hovered: !this.state.hovered

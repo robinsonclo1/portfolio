@@ -8,7 +8,7 @@ class HexRow extends React.Component {
   
   render() {
     return (
-      <div className="hex-row">
+      <div className={this.props.inverted ? "hex-row inverted" : "hex-row"}>
         {this.props.inverted &&
           <>
             <Hex size={'hex-sm'} setActiveHex={this.props.setActiveHex}/>
