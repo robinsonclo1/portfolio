@@ -54,7 +54,7 @@ $xlWidth: 260px;
       margin-top: 10px;
     }
 
-    &:not(.inverted) {
+    &.inverted {
       &:first-child,
       &:last-child {
         .hex-md {
@@ -63,10 +63,22 @@ $xlWidth: 260px;
       }
     }
 
-    &:not(.inverted) {
+    &.inverted {
       &:nth-child(2) {
         .hex-md {
           margin-left: 33px;
+        }
+
+        .hex-lg {
+          margin-left: 17px;
+        }
+      }
+    }
+
+    &:not(.inverted) {
+      &:nth-child(2) {
+        > .hex-lg {
+          margin-left: -10px;
         }
       }
     }

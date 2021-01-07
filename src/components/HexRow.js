@@ -9,18 +9,8 @@ class HexRow extends React.Component {
   render() {
     return (
       <div className={this.props.inverted ? 'hex-row inverted' : 'hex-row'}>
-        {this.props.inverted &&
-          <>
-            <Hex size={'hex-sm'} setActiveHex={this.props.setActiveHex}/>
-            <Hex size={'hex-md'} setActiveHex={this.props.setActiveHex}/>
-          </>
-        }
-        {!this.props.inverted &&
-          <>
-            <Hex size={'hex-md'} setActiveHex={this.props.setActiveHex}/>
-            <Hex size={'hex-sm'} setActiveHex={this.props.setActiveHex}/>
-          </>
-        }
+        <Hex size={this.props.inverted ? 'hex-md' : 'hex-sm'} setActiveHex={this.props.setActiveHex}/>
+        <Hex size={this.props.inverted ? 'hex-sm' : 'hex-md'} setActiveHex={this.props.setActiveHex}/>
       </div>
     )
   }
