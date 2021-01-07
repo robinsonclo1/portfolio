@@ -14,7 +14,7 @@ class App extends React.Component {
   
   setActiveHex(size) {
     this.setState({ activeHex: size });
-    if (size === "hex-sm") {
+    if (size === 'hex-sm') {
       this.toggleInversion();
     }
   }
@@ -27,13 +27,13 @@ class App extends React.Component {
   
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className='App'>
+        <header className='App-header'>
           <h1>Robin Clower</h1>
-          <div className="hex-wrapper">
-            <HexRow inverted={this.state.inverted} class={"top"} setActiveHex={this.setActiveHex}/>
-            <HexRow inverted={!this.state.inverted} class={"middle"} setActiveHex={this.setActiveHex}/>
-            <HexRow inverted={this.state.inverted} class={"bottom"} setActiveHex={this.setActiveHex}/>
+          <div className='hex-wrapper'>
+            <HexRow inverted={this.state.inverted} setActiveHex={this.setActiveHex}/>
+            <HexRow inverted={!this.state.inverted} setActiveHex={this.setActiveHex}/>
+            <HexRow inverted={this.state.inverted} setActiveHex={this.setActiveHex}/>
           </div>
         </header>
       </div>

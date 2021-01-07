@@ -1,5 +1,5 @@
 import React  from 'react'
-import Hex from "./Hex";
+import Hex from './Hex';
 
 class HexRow extends React.Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class HexRow extends React.Component {
   
   render() {
     return (
-      <div className={this.props.inverted ? "hex-row inverted" : "hex-row"}>
+      <div className={this.props.inverted ? 'hex-row inverted' : 'hex-row'}>
         {this.props.inverted &&
           <>
             <Hex size={'hex-sm'} setActiveHex={this.props.setActiveHex}/>

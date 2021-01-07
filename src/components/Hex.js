@@ -2,12 +2,11 @@ import React from 'react'
 import './Hex.scss'
 
 class Hex extends React.Component {
-  constructor(props) {
-    super();
-    this.handleChange = this.handleChange.bind(this);
+  constructor() {
+    super()
+    this.handleChange = this.handleChange.bind(this)
     this.state = {
-      hovered: false,
-      size: props.size
+      hovered: false
     }
   }
   
@@ -21,7 +20,7 @@ class Hex extends React.Component {
   
   render() {
     return (
-      <div className={this.state.hovered ? "hex-lg" :  this.state.size} onMouseOver={this.handleChange} onMouseLeave={this.handleChange}>
+      <div className={this.state.hovered ? 'hex-lg' :  this.props.size} onMouseOver={this.handleChange} onMouseLeave={this.handleChange}>
       </div>
     )
   }
