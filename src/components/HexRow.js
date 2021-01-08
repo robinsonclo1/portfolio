@@ -9,7 +9,7 @@ class HexRow extends React.Component {
   render() {
     const hex = this.props.column.map(item =>
       <Hex inverted={this.props.inverted} setActiveHex={this.props.setActiveHex} key={item.id} id={item.id}
-           title={item.title}/>)
+           item={item}/>)
     
     return (
       <div className={this.props.inverted ? 'hex-row inverted' : 'hex-row'}>

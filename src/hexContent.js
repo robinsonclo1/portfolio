@@ -3,15 +3,15 @@ const hexContent = [
     column: [
       {
         id: 11,
-        title: "11",
-        fontAwesomeIcon: "FA",
+        title: "Accessibility",
+        fontAwesomeIcon: "faWheelchair",
         subhead: "subhead",
         body: "body"
       },
       {
         id: 12,
-        title: "12",
-        fontAwesomeIcon: "FA",
+        title: "Hobbies",
+        fontAwesomeIcon: "faDice",
         subhead: "subhead",
         body: "body"
       }
@@ -21,15 +21,15 @@ const hexContent = [
     column: [
       {
         id: 21,
-        title: "21",
-        fontAwesomeIcon: "FA",
+        title: "Educator",
+        fontAwesomeIcon: "faMicrophoneAlt",
         subhead: "subhead",
         body: "body"
       },
       {
         id: 22,
-        title: "22",
-        fontAwesomeIcon: "FA",
+        title: "Versatile",
+        fontAwesomeIcon: "faToolbox",
         subhead: "subhead",
         body: "body"
       }
@@ -39,15 +39,15 @@ const hexContent = [
     column: [
       {
         id: 31,
-        title: "31",
-        fontAwesomeIcon: "FA",
+        title: "Contact Me",
+        fontAwesomeIcon: "faAddressCard",
         subhead: "subhead",
         body: "body"
       },
       {
         id: 32,
-        title: "32",
-        fontAwesomeIcon: "FA",
+        title: "Technology",
+        fontAwesomeIcon: "faCogs",
         subhead: "subhead",
         body: "body"
       }
