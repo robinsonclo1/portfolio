@@ -13,6 +13,9 @@ $xlWidth: 260px;
   height: $height;
   background: $color;
   margin: $height/3 auto $height/3 0;
+  //display: flex;
+  //align-items: center;
+  //justify-content: center;
 
   &::before,
   &::after {
@@ -33,6 +36,18 @@ $xlWidth: 260px;
     border-top: $height/2 solid $color;
     transition: top 1000ms, border 1000ms;
   }
+
+  //.hex-interior {
+  //  z-index: 1;
+  //  display: flex;
+  //  flex-direction: column;
+  //
+  //  svg {
+  //    transition: font-size 1000ms;
+  //    margin-right: 0;
+  //    font-size: $width/2;
+  //  }
+  //}
 }
 
 .hex-wrapper {
@@ -45,7 +60,7 @@ $xlWidth: 260px;
     flex-direction: row;
     align-items: center;
 
-    :first-child {
+    > :first-child {
       margin-right: 10px;
     }
 
@@ -91,7 +106,6 @@ $xlWidth: 260px;
       }
     }
   }
-
 }
 
 .hex-xs {
