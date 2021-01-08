@@ -28,6 +28,7 @@ class App extends React.Component {
   render() {
     const hexRow = this.state.content.map((item, i) =>
       <HexRow inverted={i !== 1  ? this.state.inverted : !this.state.inverted} setActiveHex={this.setActiveHex} key={i} column={item.column} />)
+    
     return (
       <div className='App'>
         <header className='App-header'>
