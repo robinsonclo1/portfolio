@@ -10,17 +10,27 @@ class Hex extends React.Component {
     }
   }
   
-
+  setSize() {
+    if (this.props.inverted ===( this.props.id % 2 === 0)) {
+      return "hex-md"
+    } else {
+      return "hex-sm"
+    }
+  }
+  
   handleChange() {
-    this.props.setActiveHex(this.props.size);
+    const size = this.setSize()
+    this.props.setActiveHex(size);
     this.setState({
       hovered: !this.state.hovered
     })
   }
   
   render() {
+    const size = this.setSize()
     return (
-      <div className={this.state.hovered ? 'hex-lg' :  this.props.size} onMouseOver={this.handleChange} onMouseLeave={this.handleChange}>
+      <div className={this.state.hovered ? 'hex-lg' :  size} onMouseEnter={this.handleChange} onMouseLeave={this.handleChange}>
+        <p>{this.props.title}</p>
       </div>
     )
   }

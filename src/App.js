@@ -1,6 +1,7 @@
 import './App.scss';
 import React from 'react'
 import HexRow from './components/HexRow'
+import hexContent from "./hexContent"
 
 class App extends React.Component {
   constructor() {
@@ -8,14 +9,13 @@ class App extends React.Component {
     this.setActiveHex = this.setActiveHex.bind(this)
     this.state = {
       inverted: false,
-      activeHex: ''
+      content: hexContent
     }
   }
   
   setActiveHex(size) {
-    this.setState({ activeHex: size });
     if (size === 'hex-sm') {
-      this.toggleInversion();
+      this.toggleInversion()
     }
   }
   
@@ -26,14 +26,14 @@ class App extends React.Component {
   }
   
   render() {
+    const hexRow = this.state.content.map((item, i) =>
+      <HexRow inverted={i !== 1  ? this.state.inverted : !this.state.inverted} setActiveHex={this.setActiveHex} key={i} column={item.column} />)
     return (
       <div className='App'>
         <header className='App-header'>
           <h1>Robin Clower</h1>
           <div className='hex-wrapper'>
-            <HexRow inverted={this.state.inverted} setActiveHex={this.setActiveHex}/>
-            <HexRow inverted={!this.state.inverted} setActiveHex={this.setActiveHex}/>
-            <HexRow inverted={this.state.inverted} setActiveHex={this.setActiveHex}/>
+            {hexRow}
           </div>
         </header>
       </div>
