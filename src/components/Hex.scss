@@ -47,7 +47,8 @@ $xlWidth: 260px;
     }
 
     svg {
-      transition: font-size 1000ms;
+      transition: font-size 1000ms, color 1000ms;
+      color: white;
       margin-right: 0;
       font-size: $width/2;
     }
@@ -129,7 +130,13 @@ $xlWidth: 260px;
 }
 
 .hex-lg {
-  @include hex($lgWidth, #FFBC1D)
+  @include hex($lgWidth, #FFBC1D);
+
+  .hex-interior {
+    svg {
+      color: #282c34;
+    }
+  }
 }
 
 .hex-xl {

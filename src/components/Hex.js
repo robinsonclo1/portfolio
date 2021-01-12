@@ -34,8 +34,11 @@ class Hex extends React.Component {
         return <FontAwesomeIcon icon={faToolbox} />
       case "faCogs":
         return <FontAwesomeIcon icon={faCogs} />
+      default:
+        return <FontAwesomeIcon icon={faCogs} />
     }
   }
+  
   handleChange() {
     const size = this.setSize()
     this.props.setActiveHex(size);
