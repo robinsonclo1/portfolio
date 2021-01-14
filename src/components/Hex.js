@@ -2,6 +2,7 @@ import React from 'react'
 import './Hex.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWheelchair, faDice, faMicrophoneAlt, faToolbox, faAddressCard, faCogs } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 class Hex extends React.Component {
   constructor() {
@@ -34,6 +35,8 @@ class Hex extends React.Component {
         return <FontAwesomeIcon icon={faToolbox} />
       case "faCogs":
         return <FontAwesomeIcon icon={faCogs} />
+      case "faGithub":
+        return <FontAwesomeIcon icon={faGithub} />
       default:
         return <FontAwesomeIcon icon={faCogs} />
     }

@@ -3,6 +3,7 @@ import React from 'react'
 import HexRow from './components/HexRow'
 import hexContent from './hexContent'
 import Modal from './components/Modal'
+import Hex from "./components/Hex";
 
 class App extends React.Component {
   constructor() {

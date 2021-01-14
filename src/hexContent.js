@@ -6,7 +6,14 @@ const hexContent = [
         title: "Accessibility",
         fontAwesomeIcon: "faWheelchair",
         subhead: "subhead",
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at euismod ante. Vivamus bibendum augue ac tellus imperdiet pulvinar. Nullam varius euismod magna, sed pharetra massa feugiat eleifend. Vestibulum posuere cursus risus, vel rutrum felis tincidunt vel. Maecenas faucibus tellus ut ligula elementum imperdiet. Pellentesque sit amet eros sagittis, eleifend dui at, scelerisque libero. Sed venenatis dui at porttitor tempor. Donec vestibulum sapien vitae accumsan condimentum. Nullam eget dapibus odio, quis sodales odio. Curabitur egestas cursus ipsum, sed dapibus arcu mollis quis. Etiam commodo facilisis felis ut mollis. Suspendisse faucibus felis vitae sapien ultrices, a suscipit quam commodo. Integer ac eleifend odio."
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at euismod ante. " +
+          "Vivamus bibendum augue ac tellus imperdiet pulvinar. Nullam varius euismod magna, sed pharetra massa " +
+          "feugiat eleifend. Vestibulum posuere cursus risus, vel rutrum felis tincidunt vel. Maecenas faucibus " +
+          "tellus ut ligula elementum imperdiet. Pellentesque sit amet eros sagittis, eleifend dui at, scelerisque " +
+          "libero. Sed venenatis dui at porttitor tempor. Donec vestibulum sapien vitae accumsan condimentum. Nullam eget " +
+          "dapibus odio, quis sodales odio. Curabitur egestas cursus ipsum, sed dapibus arcu mollis quis. Etiam commodo " +
+          "facilisis felis ut mollis. Suspendisse faucibus felis vitae sapien ultrices, a suscipit quam commodo. " +
+          "Integer ac eleifend odio."
       },
       {
         id: 12,
