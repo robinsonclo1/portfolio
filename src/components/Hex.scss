@@ -147,7 +147,7 @@ $xxlWidth: 450px;
 .hex-modal {
   @include hex($xlWidth, #CC851A);
 
-  @media (min-width: 768px) {
+  @media (min-width: 481px) {
     @include hex($xxlWidth, #CC851A);
     height: auto;
     min-height: $xxlWidth/1.73;

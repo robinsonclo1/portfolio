@@ -25,7 +25,6 @@ class App extends React.Component {
   }
   
   toggleModal(item, icon) {
-    console.log(item, icon)
     this.setState({
       showModal: !this.state.showModal,
       activeInfo: item,
@@ -46,13 +45,11 @@ class App extends React.Component {
               toggleModal={this.toggleModal} />)
     
     return (
-      <div className='App'>
-        <header className='App-header'>
-          <h1>Robin Clower</h1>
-          <div className='hex-wrapper'>
-            {hexRow}
-          </div>
-        </header>
+      <div className='portfolio'>
+        <h1>Robin Clower</h1>
+        <div className='hex-wrapper'>
+          {hexRow}
+        </div>
         {this.state.showModal &&
           <div className="modal-wrapper">
             <Modal closeModal={this.toggleModal} item={this.state.activeInfo} icon={this.state.icon}/>

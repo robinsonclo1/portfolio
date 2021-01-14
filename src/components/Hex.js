@@ -39,7 +39,8 @@ class Hex extends React.Component {
     }
   }
   
-  handleChange() {
+  handleChange(e) {
+    e.preventDefault()
     const size = this.setSize()
     this.props.setActiveHex(size)
     this.setState({
@@ -58,7 +59,9 @@ class Hex extends React.Component {
     const size = this.setSize()
     const icon = this.setIcon()
     return (
-      <div className={this.state.hovered ? 'hex-lg' :  size} onMouseEnter={this.handleChange} onMouseLeave={this.handleChange}>
+      <div className={this.state.hovered ? 'hex-lg' :  size}
+           onMouseEnter={this.handleChange} onMouseLeave={this.handleChange}
+           onClick={this.handleChange} tabIndex="0">
         <div className='hex-interior'>
           {icon}
           {this.state.hovered &&
