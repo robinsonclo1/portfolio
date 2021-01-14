@@ -41,9 +41,16 @@ class Hex extends React.Component {
   
   handleChange() {
     const size = this.setSize()
-    this.props.setActiveHex(size);
+    this.props.setActiveHex(size)
     this.setState({
       hovered: !this.state.hovered
+    })
+  }
+  
+  toggleModal(props, icon) {
+    this.props.toggleModal(props, icon)
+    this.setState({
+      hovered: false
     })
   }
   
@@ -54,9 +61,11 @@ class Hex extends React.Component {
       <div className={this.state.hovered ? 'hex-lg' :  size} onMouseEnter={this.handleChange} onMouseLeave={this.handleChange}>
         <div className='hex-interior'>
           {icon}
-          {/* @todo transition between not hovered and hovered */}
           {this.state.hovered &&
-            <button>{this.props.item.title}</button>
+            <button
+              onClick={() => this.toggleModal(this.props.item, icon)}
+              className="modal-toggle"
+            >{this.props.item.title}</button>
           }
         </div>
       </div>
