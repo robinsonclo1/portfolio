@@ -10,6 +10,7 @@ class App extends React.Component {
     super()
     this.toggleModal = this.toggleModal.bind(this)
     this.setActiveHex = this.setActiveHex.bind(this)
+    this.setSize = this.setSize.bind(this)
     this.state = {
       inverted: false,
       content: hexContent,
@@ -19,7 +20,14 @@ class App extends React.Component {
     }
   }
   
-  setActiveHex(size) {
+  setActiveHex(item) {
+    this.setState({
+      activeInfo: item
+    })
+    
+  }
+  
+  setSize(size) {
     if (size === 'hex-sm') {
       this.toggleInversion()
     }
@@ -42,8 +50,8 @@ class App extends React.Component {
   render() {
     const hexRow = this.state.content.map((item, i) =>
       <HexRow inverted={i !== 1  ? this.state.inverted : !this.state.inverted}
-              setActiveHex={this.setActiveHex} key={i} column={item.column}
-              toggleModal={this.toggleModal} />)
+              setActiveHex={this.setActiveHex} setSize={this.setSize} key={i} column={item.column}
+              toggleModal={this.toggleModal} activeItem={this.state.activeInfo}/>)
     
     return (
       <div className='portfolio'>
