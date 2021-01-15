@@ -16,16 +16,26 @@
   z-index:3;
   position: absolute;
   left: 50%;
-  top: 25%;
+  top: 18%;
   transform: translate(-50%);
 
   .hex-interior {
     text-align: center;
+    max-height: 400px;
 
     svg {
       width: auto;
-      margin-top: -50px;
+      margin: -50px 0 10px;
       font-size: 50px;
+
+      @media (min-width: 481px) {
+        margin: -90px 0 10px;
+      }
+    }
+
+    p {
+      overflow: auto;
+      margin-bottom: 5px;
     }
 
     .btn-close {
@@ -37,6 +47,25 @@
       font-size: 30px;
       border: none;
       display: inline-flex;
+
+      &:hover,
+      &:focus {
+        .close {
+          animation-name: spin;
+          animation-duration: 5000ms;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+      }
+
+      @keyframes spin {
+        from {
+          transform:rotate(0deg);
+        }
+        to {
+          transform:rotate(360deg);
+        }
+      }
     }
 
     .screen-reader-offscreen {

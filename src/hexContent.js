@@ -2,11 +2,16 @@ const hexContent = [
   {
     column: [
       {
-        id: 11,
+        id: 1,
         title: "Accessibility",
         fontAwesomeIcon: "faWheelchair",
         subhead: "subhead",
         body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at euismod ante. " +
+          "Vivamus bibendum augue ac tellus imperdiet pulvinar. Nullam varius euismod magna, sed pharetra massa " +
+          "feugiat eleifend. Vestibulum posuere cursus risus, vel rutrum felis tincidunt vel. Maecenas faucibus " +
+          "tellus ut ligula elementum imperdiet. Pellentesque sit amet eros sagittis, eleifend dui at, scelerisque " +
+          "libero. Sed venenatis dui at porttitor tempor. Donec vestibulum sapien vitae accumsan condimentum. Nullam eget " +
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at euismod ante. " +
           "Vivamus bibendum augue ac tellus imperdiet pulvinar. Nullam varius euismod magna, sed pharetra massa " +
           "feugiat eleifend. Vestibulum posuere cursus risus, vel rutrum felis tincidunt vel. Maecenas faucibus " +
           "tellus ut ligula elementum imperdiet. Pellentesque sit amet eros sagittis, eleifend dui at, scelerisque " +
@@ -16,7 +21,7 @@ const hexContent = [
           "Integer ac eleifend odio."
       },
       {
-        id: 12,
+        id: 2,
         title: "Hobbies",
         fontAwesomeIcon: "faDice",
         subhead: "subhead",
@@ -27,14 +32,14 @@ const hexContent = [
   {
     column: [
       {
-        id: 21,
+        id: 3,
         title: "Educator",
         fontAwesomeIcon: "faMicrophoneAlt",
         subhead: "subhead",
         body: "body"
       },
       {
-        id: 22,
+        id: 4,
         title: "Versatile",
         fontAwesomeIcon: "faToolbox",
         subhead: "subhead",
@@ -45,14 +50,14 @@ const hexContent = [
   {
     column: [
       {
-        id: 31,
+        id: 5,
         title: "Contact Me",
         fontAwesomeIcon: "faAddressCard",
         subhead: "subhead",
         body: "body"
       },
       {
-        id: 32,
+        id: 6,
         title: "Technology",
         fontAwesomeIcon: "faCogs",
         subhead: "subhead",

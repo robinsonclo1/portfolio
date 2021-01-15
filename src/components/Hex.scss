@@ -57,13 +57,14 @@ $xxlWidth: 450px;
 
     .modal-toggle {
       border: none;
-      padding: 8px 16px;
+      padding: 4px 8px;
       display: inline-block;
       font-size: 16px;
       margin-top: 10px;
       border-radius: 5%;
       animation: createBox .5s;
     }
+
     @keyframes createBox {
       from {
         transform: scale(0);
@@ -165,13 +166,13 @@ $xxlWidth: 450px;
 
 .hex-modal {
   @include hex($xlWidth, #CC851A);
+  height: auto;
+  min-height: $xlWidth/1.73;
+  max-height: 60%;
 
   @media (min-width: 481px) {
     @include hex($xxlWidth, #CC851A);
     height: auto;
     min-height: $xxlWidth/1.73;
   }
-
-  height: auto;
-  min-height: $xlWidth/1.73;
 }

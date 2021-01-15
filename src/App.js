@@ -24,7 +24,6 @@ class App extends React.Component {
     this.setState({
       activeInfo: item
     })
-    
   }
   
   setSize(size) {
@@ -56,7 +55,10 @@ class App extends React.Component {
     return (
       <div className='portfolio'>
         <h1>Robin Clower</h1>
-        <div className='hex-wrapper'>
+        <p>Welcome to my portfolio site!
+          <br /> Hover, tab, or click on any of the hexes below to get started.
+        </p>
+        <div className='hex-wrapper' aria-label="Six hexagons are arranged in a two by three pattern. Each has an icon and a button in the center of the hex">
           {hexRow}
         </div>
         {this.state.showModal &&

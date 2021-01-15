@@ -22,7 +22,7 @@ class Modal extends React.Component {
             {this.props.icon}
             <h1 id="modal-title">{this.props.item.title}</h1>
             <p>{this.props.item.body}</p>
-            <button id="modalCloseButton" className="btn-close hex-xs" onClick={this.closeModal}>✕
+            <button id="modalCloseButton" className="btn-close hex-xs" onClick={this.closeModal}><span className="close">✕</span>
             </button>
           </div>
         </div>

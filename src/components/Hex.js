@@ -19,19 +19,19 @@ class Hex extends React.Component {
   setIcon() {
     switch(this.props.item.fontAwesomeIcon) {
       case "faAddressCard":
-        return <FontAwesomeIcon icon={faAddressCard} />
+        return <FontAwesomeIcon icon={faAddressCard} aria-label="Address Card"/>
       case "faDice":
-        return <FontAwesomeIcon icon={faDice} />
+        return <FontAwesomeIcon icon={faDice} aria-label="Dice"/>
       case "faWheelchair":
-        return <FontAwesomeIcon icon={faWheelchair} />
+        return <FontAwesomeIcon icon={faWheelchair} aria-label="Wheelchair"/>
       case "faMicrophoneAlt":
-        return <FontAwesomeIcon icon={faMicrophoneAlt} />
+        return <FontAwesomeIcon icon={faMicrophoneAlt} aria-label="Microphone"/>
       case "faToolbox":
-        return <FontAwesomeIcon icon={faToolbox} />
+        return <FontAwesomeIcon icon={faToolbox} aria-label="A closed toolbox"/>
       case "faCogs":
-        return <FontAwesomeIcon icon={faCogs} />
+        return <FontAwesomeIcon icon={faCogs} aria-label="Three meshed together cogs"/>
       case "faGithub":
-        return <FontAwesomeIcon icon={faGithub} />
+        return <FontAwesomeIcon icon={faGithub} aria-label="Github logo"/>
       default:
         return <FontAwesomeIcon icon={faCogs} />
     }
@@ -88,11 +88,13 @@ class Hex extends React.Component {
   render() {
     const size = this.setSize()
     const icon = this.setIcon()
+    const hexLabel = "Hex " + this.props.id + " of 6. " + this.props.item.title
+    const buttonLabel = "Open " + this.props.item.title + " modal"
   
     return (
       <div className={size}
            onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}
-           onClick={this.handleHover} onFocus={this.handleFocus} tabIndex="0">
+           onClick={this.handleHover} onFocus={this.handleFocus} tabIndex="0" aria-label={hexLabel}>
         <div className='hex-interior'>
           {icon}
           {size === 'hex-lg' &&
@@ -101,6 +103,7 @@ class Hex extends React.Component {
               onFocus={this.handleFocus}
               onBlur={this.handleBlur}
               className="modal-toggle"
+              aria-label={buttonLabel}
             >{this.props.item.title}</button>
           }
         </div>
