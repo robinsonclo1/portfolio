@@ -50,7 +50,7 @@ class App extends React.Component {
     const hexRow = this.state.content.map((item, i) =>
       <HexRow inverted={i !== 1  ? this.state.inverted : !this.state.inverted}
               setActiveHex={this.setActiveHex} setSize={this.setSize} key={i} column={item.column}
-              toggleModal={this.toggleModal} activeItem={this.state.activeInfo}/>)
+              toggleModal={this.toggleModal} activeItem={this.state.activeInfo} showModal={this.state.showModal}/>)
     
     return (
       <div className='portfolio'>

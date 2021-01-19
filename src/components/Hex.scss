@@ -4,7 +4,8 @@ $smHeight: $smWidth/1.73;
 $mdWidth: 140px;
 $lgWidth: 175px;
 $xlWidth: 260px;
-$xxlWidth: 450px;
+$xxlWidth: 350px;
+$xxxlWidth: 450px;
 
 @mixin hex($width, $color: #CD5C5C) {
   $height: $width/1.73;
@@ -165,14 +166,14 @@ $xxlWidth: 450px;
 }
 
 .hex-modal {
-  @include hex($xlWidth, #CC851A);
+  @include hex($xxlWidth, #CC851A);
   height: auto;
-  min-height: $xlWidth/1.73;
+  min-height: $xxlWidth/1.73;
   max-height: 60%;
 
   @media (min-width: 481px) {
-    @include hex($xxlWidth, #CC851A);
+    @include hex($xxxlWidth, #CC851A);
     height: auto;
-    min-height: $xxlWidth/1.73;
+    min-height: $xxxlWidth/1.73;
   }
 }

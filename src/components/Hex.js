@@ -90,11 +90,13 @@ class Hex extends React.Component {
     const icon = this.setIcon()
     const hexLabel = "Hex " + this.props.id + " of 6. " + this.props.item.title
     const buttonLabel = "Open " + this.props.item.title + " modal"
-  
+    const hexId = "btn-modal-" + this.props.item.title
+
     return (
-      <div className={size}
+      <div className={size} id={hexId}
            onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}
-           onClick={this.handleHover} onFocus={this.handleFocus} tabIndex="0" aria-label={hexLabel}>
+           onClick={this.handleHover} onFocus={this.handleFocus}
+           tabIndex={this.props.showModal ? "-1" : "0"} aria-label={hexLabel}>
         <div className='hex-interior'>
           {icon}
           {size === 'hex-lg' &&
