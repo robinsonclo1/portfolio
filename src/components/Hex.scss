@@ -1,6 +1,7 @@
 @import "../App.scss";
 
-$xsWidth: 45px;
+$xxsWidth: 45px;
+$xsWidth: 55px;
 $smWidth: 100px;
 $smHeight: $smWidth/1.73;
 $mdWidth: 140px;
@@ -11,7 +12,7 @@ $xxxlWidth: 450px;
 
 @mixin hex($width, $color) {
   $height: $width/1.73;
-  transition: width 1000ms, height 1000ms, margin 1000ms, background-color 1000ms;
+  transition: width 1000ms, height 1000ms, margin 1000ms, background-color 1000ms, color 1000ms;
   position: relative;
   width: $width;
   height: $height;
@@ -141,8 +142,14 @@ $xxxlWidth: 450px;
   }
 }
 
+.hex-xxs {
+  @include hex($xxsWidth, $purple-heart);
+
+  color: $serenade;
+}
+
 .hex-xs {
-  @include hex($xsWidth, $purple-heart)
+  @include hex($xsWidth, $my-sin)
 }
 
 .hex-sm {

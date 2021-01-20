@@ -6,7 +6,13 @@ class Modal extends React.Component {
   constructor() {
     super()
     this.closeModal = this.closeModal.bind(this)
+    this.handleHover = this.handleHover.bind(this)
+    this.handleFocus = this.handleFocus.bind(this)
     this.onKeyUp = this.onKeyUp.bind(this)
+    this.state = {
+      exitHovered: false,
+      exitFocused: false
+    }
   }
   
   onKeyUp(e) {
@@ -19,6 +25,18 @@ class Modal extends React.Component {
     const hexId = "btn-modal-" + this.props.item.title
     document.getElementById(hexId).focus()
     this.props.closeModal()
+  }
+  
+  handleHover(e) {
+    this.setState({
+      exitHovered: !this.state.exitHovered
+    })
+  }
+  
+  handleFocus(e) {
+    this.setState({
+      exitFocused: !this.state.exitFocused
+    })
   }
   
   render() {
@@ -42,8 +60,10 @@ class Modal extends React.Component {
               />
               }
             </div>
-            <button id="modalCloseButton" className="btn-close hex-xs"
-                    aria-label="Close modal" onClick={this.closeModal}><span className="close">✕</span>
+            <button id="modalCloseButton" className={(this.state.exitFocused || this.state.exitHovered) ? "btn-close hex-xs" : "btn-close hex-xxs"}
+                    aria-label="Close modal" onClick={this.closeModal}
+                    onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}
+                    onFocus={this.handleFocus} onBlur={this.handleFocus} ><span className="close">✕</span>
             </button>
           </div>
         </div>
