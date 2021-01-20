@@ -29,7 +29,9 @@ const hexContent = [
         title: "Educator",
         fontAwesomeIcon: "faMicrophoneAlt",
         embedUrl: "https://www.youtube.com/watch?v=8Qn4fTQdErQ",
-        body: "body"
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at euismod ante. " +
+          "Vivamus bibendum augue ac tellus imperdiet pulvinar. Nullam varius euismod magna, sed pharetra massa " +
+          "feugiat eleifend. Vestibulum posuere cursus risus, vel rutrum felis tincidunt vel. Maecenas faucibus "
       },
       {
         id: 4,

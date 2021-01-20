@@ -1,5 +1,13 @@
+// Color Palette
+$shark: #282c34;
+$purple-heart: #731ACC;
+$royal-purple: #6E4299;
+$blue-ribbon: #0711FF;
+$my-sin: #FFBC1D;
+$yellow-sin: #F7AF02;
+
 .portfolio {
-  background-color: #282c34;
+  background-color: $shark;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,6 +19,7 @@
 
   h1 {
     margin: 0 0 20px;
+    font-size: 45px;
   }
 
   p {

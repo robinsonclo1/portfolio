@@ -1,3 +1,5 @@
+@import "../App.scss";
+
 $xsWidth: 45px;
 $smWidth: 100px;
 $smHeight: $smWidth/1.73;
@@ -7,7 +9,7 @@ $xlWidth: 260px;
 $xxlWidth: 350px;
 $xxxlWidth: 450px;
 
-@mixin hex($width, $color: #CD5C5C) {
+@mixin hex($width, $color) {
   $height: $width/1.73;
   transition: width 1000ms, height 1000ms, margin 1000ms, background-color 1000ms;
   position: relative;
@@ -140,40 +142,47 @@ $xxxlWidth: 450px;
 }
 
 .hex-xs {
-  @include hex($xsWidth, #731ACC)
+  @include hex($xsWidth, $purple-heart)
 }
 
 .hex-sm {
-  @include hex($smWidth, #6E4299)
+  @include hex($smWidth, $royal-purple)
 }
 
 .hex-md {
-  @include hex($mdWidth, #0711FF)
+  @include hex($mdWidth, $blue-ribbon)
 }
 
 .hex-lg {
-  @include hex($lgWidth, #FFBC1D);
+  @include hex($lgWidth, $my-sin);
 
   .hex-interior {
     svg {
-      color: #282c34;
+      color: $shark;
     }
   }
 }
 
 .hex-xl {
-  @include hex($xlWidth, #CC851A)
+  @include hex($xlWidth, $yellow-sin)
 }
 
 .hex-modal {
-  @include hex($xxlWidth, #CC851A);
+  @include hex($xxlWidth, $yellow-sin);
   height: auto;
   min-height: $xxlWidth/1.73;
   max-height: 60%;
+  color: $shark;
 
   @media (min-width: 481px) {
-    @include hex($xxxlWidth, #CC851A);
+    @include hex($xxxlWidth, $yellow-sin);
     height: auto;
     min-height: $xxxlWidth/1.73;
+  }
+
+  .hex-interior {
+    svg {
+      color: $shark;
+    }
   }
 }
