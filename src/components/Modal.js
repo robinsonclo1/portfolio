@@ -1,5 +1,6 @@
 import React from 'react'
 import './Modal.scss'
+import ModalText from './ModalText'
 import ReactPlayer from "react-player"
 
 class Modal extends React.Component {
@@ -51,7 +52,7 @@ class Modal extends React.Component {
             {this.props.icon}
             <h1 id="modal-title">{this.props.item.title}</h1>
             <div className="modal-body">
-              <p>{this.props.item.body}</p>
+              <ModalText text={this.props.item.body} />
               {this.props.item.embedUrl &&
               <ReactPlayer
                 url={this.props.item.embedUrl}

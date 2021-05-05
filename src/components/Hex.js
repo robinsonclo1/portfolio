@@ -1,7 +1,7 @@
 import React  from 'react'
 import './Hex.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWheelchair, faDice, faMicrophoneAlt, faToolbox, faAddressCard, faCogs } from '@fortawesome/free-solid-svg-icons'
+import { faChalkboardTeacher, faChess, faGraduationCap, faToolbox, faAddressCard, faCogs } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 class Hex extends React.Component {
@@ -20,12 +20,12 @@ class Hex extends React.Component {
     switch(this.props.item.fontAwesomeIcon) {
       case "faAddressCard":
         return <FontAwesomeIcon icon={faAddressCard} aria-label="Address Card"/>
-      case "faDice":
-        return <FontAwesomeIcon icon={faDice} aria-label="Dice"/>
-      case "faWheelchair":
-        return <FontAwesomeIcon icon={faWheelchair} aria-label="Wheelchair"/>
-      case "faMicrophoneAlt":
-        return <FontAwesomeIcon icon={faMicrophoneAlt} aria-label="Microphone"/>
+      case "faChess":
+        return <FontAwesomeIcon icon={faChess} aria-label="Chess King and rook"/>
+      case "faChalkboardTeacher":
+        return <FontAwesomeIcon icon={faChalkboardTeacher} aria-label="Teaching in front of chalkboard"/>
+      case "faGraduationCap":
+        return <FontAwesomeIcon icon={faGraduationCap} aria-label="Graduation Cap"/>
       case "faToolbox":
         return <FontAwesomeIcon icon={faToolbox} aria-label="A closed toolbox"/>
       case "faCogs":
